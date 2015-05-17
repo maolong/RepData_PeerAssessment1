@@ -8,18 +8,18 @@ output:
 **This document contains the completed work for peer assignment #1 for the Coursera Reproducable Research class.**
 
 ## Loading and preprocessing the data
-Questions for assessment are:
-1. Calculate the total number of steps taken per day
-2. Make a histogram of the total number of steps taken each day
-
 First step of the analysis is the loading and preprocessing data.
 The assumption is that data is stored in local working directory.
 The analysis starts with loading necessary libraries and read data to create the initial dataset
 
 
 ## What is mean total number of steps taken per day?
-For this question, NA values are ignored.
+Questions for assessment are:
 
+1. Calculate the total number of steps taken per day
+2. Make a histogram of the total number of steps taken each day
+
+For this question, NA values are ignored.
 First the dataset is summarized, to create a new dataset with the measure of total number of stepstaken each day   
 
 ```r
