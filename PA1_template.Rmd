@@ -64,7 +64,7 @@ head(dataperinterval)
 ```
 The interval with maximun mean of steps is now calculated
 ```{r}
-maxsteps_interval <- dataperinterval[dataperinterval$stepsperminuteinterval==max(dataperinterval$stepsperminuteinterval),2]
+maxsteps_interval <- dataperinterval[dataperinterval$stepsperminuteinterval==max(dataperinterval$stepsperminuteinterval),1]
 maxsteps_interval
 ```
 So interval with maximum steps is 8:35
