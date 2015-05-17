@@ -12,6 +12,11 @@ First step of the analysis is the loading and preprocessing data.
 The assumption is that data is stored in local working directory.
 The analysis starts with loading necessary libraries and read data to create the initial dataset
 
+```r
+library(dplyr)
+library(ggplot2)
+dataset<-read.csv("activity.csv", stringsAsFactors=FALSE)
+```
 
 ## What is mean total number of steps taken per day?
 Questions for assessment are:

@@ -209,6 +209,11 @@ hr {
 The assumption is that data is stored in local working directory.
 The analysis starts with loading necessary libraries and read data to create the initial dataset</p>
 
+<pre><code class="r">library(dplyr)
+library(ggplot2)
+dataset&lt;-read.csv(&quot;activity.csv&quot;, stringsAsFactors=FALSE)
+</code></pre>
+
 <h2>What is mean total number of steps taken per day?</h2>
 
 <p>Questions for assessment are:</p>
