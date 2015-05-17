@@ -1,12 +1,17 @@
 
 ---
 title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
+output: html_document
     keep_md: true
 ---
 
+**This document contains the completed work for peer assignment #1 for the Coursera Reproducable Research class.**
+
 ## Loading and preprocessing the data
+Questions for assessment are:
+1. Calculate the total number of steps taken per day
+2. Make a histogram of the total number of steps taken each day
+
 First step of the analysis is the loading and preprocessing data.
 The assumption is that data is stored in local working directory.
 The analysis starts with loading necessary libraries and read data to create the initial dataset
@@ -14,6 +19,7 @@ The analysis starts with loading necessary libraries and read data to create the
 
 ## What is mean total number of steps taken per day?
 For this question, NA values are ignored.
+
 First the dataset is summarized, to create a new dataset with the measure of total number of stepstaken each day   
 
 ```r
@@ -67,7 +73,12 @@ g1+geom_vline(xintercept = mean_total, colour="green", linetype = "longdash")+ge
 ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
 
 ## What is the average daily activity pattern?
+Questions for assessment are:
+1. Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
+2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
+
 For these questions, NA values are ignored.
+Calculate and report the mean and median of the total number of steps taken per day
 The initial the dataset is summarized, to create a new dataset with the mean of steps taken each interval  
 
 ```r
@@ -89,14 +100,15 @@ head(dataperinterval)
 The interval with maximun mean of steps is now calculated
 
 ```r
-maxsteps_interval <- dataperinterval[dataperinterval$stepsperminuteinterval==max(dataperinterval$stepsperminuteinterval),3]
+maxsteps_interval <- dataperinterval[dataperinterval$stepsperminuteinterval==max(dataperinterval$stepsperminuteinterval),2]
 maxsteps_interval
 ```
 
 ```
-## Source: local data frame [0 x 1]
+## Source: local data frame [1 x 1]
 ## 
-## Variables not shown: NA (NULL)
+##   stepsperminuteinterval
+## 1               206.1698
 ```
 So interval with maximum steps is 8:35
 
@@ -108,11 +120,15 @@ g2<-g2+geom_line(colour = "darkblue", fill = "white")+labs(title="Total number o
 g2+theme(axis.text.x  = element_text(angle=90, vjust=0.5, size=16))+geom_vline(xintercept = as.integer(maxsteps_interval), colour="black", linetype = "longdash")+annotate("text", x = as.integer(maxsteps_interval), y = -2, label = as.character(maxsteps_interval))
 ```
 
-```
-## Error in get(x, envir = this, inherits = inh)(this, ...): (list) object cannot be coerced to type 'integer'
-```
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
 
 ## Inputing missing values
+Questions for assessment are:
+1. Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
+2. Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated.
+3. Create a new dataset that is equal to the original dataset but with the missing data filled in.
+4. Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
+
 In the initial dataset there are some NA value
 
 ```r
@@ -205,6 +221,10 @@ g3+geom_vline(xintercept = mean_total, colour="green", linetype = "longdash")+ge
 
 
 ## Are there differences in activity patterns between weekdays and weekends?
+Questions for assessment are:
+1. Create a new factor variable in the dataset with two levels - "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
+2. Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).
+    
 To evaluate differences between weekdays and weekend, the analysis uses the filled dataset.
 First step is the addition of a new column to dataset to identify if a day is weekday or weekend.
 Then the dataset is summarize to obtain the average number of steps taken in each interval, averaged across all weekday days or weekend days
