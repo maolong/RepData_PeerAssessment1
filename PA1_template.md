@@ -74,6 +74,7 @@ g1+geom_vline(xintercept = mean_total, colour="green", linetype = "longdash")+ge
 
 ## What is the average daily activity pattern?
 Questions for assessment are:
+
 1. Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -124,6 +125,7 @@ g2+theme(axis.text.x  = element_text(angle=90, vjust=0.5, size=16))+geom_vline(x
 
 ## Inputing missing values
 Questions for assessment are:
+
 1. Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
 2. Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated.
 3. Create a new dataset that is equal to the original dataset but with the missing data filled in.
@@ -222,6 +224,7 @@ g3+geom_vline(xintercept = mean_total, colour="green", linetype = "longdash")+ge
 
 ## Are there differences in activity patterns between weekdays and weekends?
 Questions for assessment are:
+
 1. Create a new factor variable in the dataset with two levels - "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
 2. Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).
     
@@ -270,4 +273,3 @@ g4+geom_line(colour = "darkblue")+labs(y="Number of steps",x="Interval")+ facet_
 
 During weekdays the steps are concentrate before 10:00, before the working day starts, and steps remain lower than weekend after 10:00.
 This indicates a different pattern between weekdays and weekend.
-

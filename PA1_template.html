@@ -264,9 +264,12 @@ g1+geom_vline(xintercept = mean_total, colour=&quot;green&quot;, linetype = &quo
 
 <h2>What is the average daily activity pattern?</h2>
 
-<p>Questions for assessment are:
-1. Make a time series plot (i.e. type = &ldquo;l&rdquo;) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
-2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?</p>
+<p>Questions for assessment are:</p>
+
+<ol>
+<li>Make a time series plot (i.e. type = &ldquo;l&rdquo;) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)</li>
+<li>Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?</li>
+</ol>
 
 <p>For these questions, NA values are ignored.
 Calculate and report the mean and median of the total number of steps taken per day
@@ -312,11 +315,14 @@ g2+theme(axis.text.x  = element_text(angle=90, vjust=0.5, size=16))+geom_vline(x
 
 <h2>Inputing missing values</h2>
 
-<p>Questions for assessment are:
-1. Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
-2. Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated.
-3. Create a new dataset that is equal to the original dataset but with the missing data filled in.
-4. Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?</p>
+<p>Questions for assessment are:</p>
+
+<ol>
+<li>Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)</li>
+<li>Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated.</li>
+<li>Create a new dataset that is equal to the original dataset but with the missing data filled in.</li>
+<li>Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?</li>
+</ol>
 
 <p>In the initial dataset there are some NA value</p>
 
@@ -398,9 +404,12 @@ g3+geom_vline(xintercept = mean_total, colour=&quot;green&quot;, linetype = &quo
 
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
 
-<p>Questions for assessment are:
-1. Create a new factor variable in the dataset with two levels - &ldquo;weekday&rdquo; and &ldquo;weekend&rdquo; indicating whether a given date is a weekday or weekend day.
-2. Make a panel plot containing a time series plot (i.e. type = &ldquo;l&rdquo;) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).</p>
+<p>Questions for assessment are:</p>
+
+<ol>
+<li>Create a new factor variable in the dataset with two levels - &ldquo;weekday&rdquo; and &ldquo;weekend&rdquo; indicating whether a given date is a weekday or weekend day.</li>
+<li>Make a panel plot containing a time series plot (i.e. type = &ldquo;l&rdquo;) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).</li>
+</ol>
 
 <p>To evaluate differences between weekdays and weekend, the analysis uses the filled dataset.
 First step is the addition of a new column to dataset to identify if a day is weekday or weekend.
